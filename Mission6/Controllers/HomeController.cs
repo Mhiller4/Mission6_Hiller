@@ -12,13 +12,9 @@ public class HomeController : Controller
     public HomeController(MovieFormContext context)
     {
         _context = context;
+        _context.SaveChanges();
     }
-    private readonly ILogger<HomeController> _logger;
-
-    public HomeController(ILogger<HomeController> logger)
-    {
-        _logger = logger;
-    }
+   
 
     public IActionResult Index()
     {
