@@ -20,15 +20,12 @@ public class HomeController : Controller
     {
         return View();
     }
-
+    [HttpGet]
     public IActionResult Form()
     {
         return View();
     }
-    public IActionResult GetToKnow()
-    {
-        return View();
-    }
+ 
 
     [HttpPost]
     public IActionResult MovieForm(Movie response)
@@ -39,5 +36,8 @@ public class HomeController : Controller
         return View("Confirmation", response);
     }
 
-    
+    public IActionResult GetToKnow()
+    {
+        return View();
+    }
 }
