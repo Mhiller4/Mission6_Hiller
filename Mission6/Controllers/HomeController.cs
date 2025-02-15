@@ -12,7 +12,7 @@ public class HomeController : Controller
     public HomeController(MovieFormContext context)
     {
         _context = context;
-        _context.SaveChanges();
+        
     }
    
 
@@ -25,14 +25,17 @@ public class HomeController : Controller
     {
         return View();
     }
- 
 
     [HttpPost]
-    public IActionResult MovieForm(Movie response)
+    public IActionResult Form(Movie response)
     {
-        _context.Movies.Add(response);
-        _context.SaveChanges(); // Commits the changes to the Database
-        
+        if (ModelState.IsValid) // Check if input is valid
+        {
+            _context.Movies.Add(response);
+            _context.SaveChanges(); // Commit to DB
+
+            return View("Confirmation", response);
+        }
         return View("Confirmation", response);
     }
 
