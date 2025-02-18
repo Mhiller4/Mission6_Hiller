@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Mission6.Models
 {
-    public class Movie
+    public class Movie //Creates class for Movies and contains all parameters we're going to pass through
     {
         [Key]
         public int MovieId { get; set; }

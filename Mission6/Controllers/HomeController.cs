@@ -20,12 +20,13 @@ public class HomeController : Controller
     {
         return View();
     }
+    // Get stuff
     [HttpGet]
     public IActionResult Form()
     {
         return View();
     }
-
+    // Post stuff
     [HttpPost]
     public IActionResult Form(Movie response)
     {

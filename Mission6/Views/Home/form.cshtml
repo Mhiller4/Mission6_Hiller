@@ -5,7 +5,7 @@
 <h1>@ViewData["Title"]</h1>
 <link rel="stylesheet" href="~/css/site.css" />
 
-
+<!-- this is the form template -->
 
 <form method="post">
     <label asp-for="Category">Category:</label>
@@ -28,7 +28,7 @@
         <option value="PG-13">PG-13</option>
         <option value="R">R</option>
     </select>
-    
+   <!--These make sure things are to correct types, bool, drop down etc -->
     <label asp-for="Edited">Edited:</label>
     <select asp-for="Edited">
         <option value="">-- Select --</option>
